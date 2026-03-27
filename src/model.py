@@ -231,7 +231,7 @@ class MAEDecoder(nn.Module):
 # Classifier (shared)
 # =========================================================
 class Classifier(nn.Module):
-    def __init__(self, latent_size=1024, inter_num_ch=64):
+    def __init__(self, latent_size=latent_size, inter_num_ch=64):
         super().__init__()
         self.fc = nn.Sequential(
             nn.BatchNorm1d(latent_size),
